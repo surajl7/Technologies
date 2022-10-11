@@ -1,0 +1,27 @@
+//data types
+
+//binary 0,1
+//conversion 8 bits = 1 byte
+
+//integer --> int == 2 bytes
+//float --> float == 4 bytes
+//long --> long int == 4 bytes
+//double --> double == 8 bytes
+//long double --> long double == 10 bytes
+
+#include<stdio.h>
+void main()
+{
+
+    char a;
+    printf("\nEnter the character: ",a);
+    scanf("%c",&a);
+
+    printf("\nCharacter is %c",a);
+    printf("\n");
+
+    printf("\nsize of character = %d",sizeof(a));
+
+}
+
+
