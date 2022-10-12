@@ -20,24 +20,21 @@ void main()
     int arr[count];
 
     printf("\nEnter array elements: \n");
-    for(int i = 0; i <= count; i++){
+    for(int i = 0; i < count; i++){
         printf("arr[%d] = ",i);
         scanf("%d",&arr[i]);
     }
 
     printf("\nArray is: ");
-    for(int i = 0; i <= count; i++){
+    for(int i = 0; i < count; i++){
         printf("%d ",arr[i]);
     }
     printf("\n");
 
-    for(int i = 0; i<=count;i++){
-        for(int j = 0; j <= count - i;j++){
-            if (arr[j]>arr[j+1]){
-                max = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = max;
-            }
+    max=arr[0];
+    for(int i = 0; i<=count; i++){
+        if (max<arr[i]){
+            max = arr[i];
         }
     }
         printf("\nMaximum number in array is: %d\n",max);
