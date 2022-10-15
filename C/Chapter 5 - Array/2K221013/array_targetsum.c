@@ -2,7 +2,7 @@
 
 /*
 
-Ex. To find the target sum form array
+Ex. To find the target sum form array element pair
 
 
 Questions:
@@ -18,7 +18,7 @@ datatype arr_size = sizeof(name_of_array)/sizeof(name_of_array[index]);
 #include<stdio.h>
 void main()
 {
-    int targetsum,i,tmp,ts=0;
+    int targetsum,i,tmp,ts=0,ts2=0,tmp2,j,count=0;
 
     int arr[] = {10,15,6,3,1};
 
@@ -41,9 +41,9 @@ void main()
     for(i=0;i<arr_len;i++){
         sum = sum + arr[i];
     }
-    printf("\nSum of elements of array: %d\n\n",sum);
+    printf("\nSum of elements of array: %d\n",sum);
 
-
+/*
     //Searching element is array
     for(i=0;i<arr_len;i++){
         if(targetsum == arr[i]){
@@ -69,10 +69,22 @@ void main()
                 }
             }
         }
-
         printf("\nSum of elements less than targetsum: %d\n",ts);
     }
 
+*/
 
+    for(i=0;i<arr_len;i++){
+        for(j=i;j<arr_len;j++){
+            ts2 = arr[i] + arr[j];
+            if(ts2 == targetsum){
+                printf("\narr[%d](%d) + arr[%d](%d) = %d\n",i,arr[i],j,arr[j],ts2);
+                count++;
+            }
+        }
+    }
 
+    if(count<1){
+        printf("\nArray element pair is not present for targetsum\n");
+    }
 }
