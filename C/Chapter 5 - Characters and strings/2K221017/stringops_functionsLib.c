@@ -48,9 +48,9 @@ void main()
 
     printf("\nString upper case: %s\n",strupr(s1));
 
-    printf("\nCharacters first occurrence in string: %s\n",strchr(s1,"S")); //-------->
+    printf("\nCharacters first occurrence in string: %s\n",strchr(s1,'S')); //-------->Characters should always be in single quotes
 
-    printf("\nCharacters last occurrence in string: %s\n",strrchr(s1,"S")); //-------->
+    printf("\nCharacters last occurrence in string: %s\n",strrchr(s1,'S')); //-------->Characters should always be in single quotes
 
     printf("\nString occurrence in string: %s\n",strstr(s1,"IS"));
 

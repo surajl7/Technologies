@@ -47,6 +47,8 @@ void main()
     char s[20],s1[20],s2[20];
     int len, len1, len2;
 
+     printf("\nEnter the scanf() string: ");
+scanf("%s",s);
 
     printf("\nEnter 1st string: ");
     gets(s1);
@@ -54,8 +56,8 @@ void main()
     printf("\nEnter 2nd string: ");
     gets(s2);
 
-//  printf("\nEnter the scanf() string: ");
-//  scanf("%s",s);
+ printf("\nEnter the scanf() string: ");
+scanf("%s",s);
 
 
 //To find the length of string
