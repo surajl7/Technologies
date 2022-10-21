@@ -45,7 +45,7 @@ void main()
 
     printf("\nEnter the array elements: \n\n");
 
-    for(i=0;i<=count;i++){
+    for(i=0;i<count;i++){
         printf("a[%d] = ",i);
         scanf("%d",&a[i]);
     }
