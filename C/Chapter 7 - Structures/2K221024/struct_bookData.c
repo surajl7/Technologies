@@ -6,7 +6,7 @@ Ex. Books data
 
 #include<stdio.h>
 
-int count;
+int count=5;
 
 struct bookData{
     int id;
@@ -22,11 +22,11 @@ void compairePrice(struct bookData bData[count]);
 
 int main(){
 
-    printf("\nEnter book count: ");
-    scanf("%d",&count);
+    //printf("\nEnter book count: ");
+    //scanf("%d",&count);
 
-    struct bookData bData[count];
-
+    //struct bookData bData[count];
+/*
     printf("\nEnter book's details \n");
     for(int i=0; i<count; i++){
         printf("Book Id: ");
@@ -43,8 +43,13 @@ int main(){
 
         printf("\n");
     }
+*/
+    //struct bookData bData[0] = {1,"C_Programming","cProgrammer",250.50};
+    //struct bookData bData[1] = {2,"JavaProgramming","jProgrammer",750};
 
-    printf("\n================================\n\n");
+    struct bookData bData[5] = {{1,"C_Programming","cProgrammer",250.50},{2,"JavaProgramming","jProgrammer",750},{3,"PythonPRogramming","pPRogrammer",450.75},{4,"javaScript","jsPRogrammer",674.00},{5,"SwiftProgrammer","sProgrammer",500}};
+
+    //printf("\n================================\n\n");
 
     operations(bData);
 
