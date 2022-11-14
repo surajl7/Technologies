@@ -19,5 +19,9 @@ void main()
     printf("\nEnter the name: ");
     scanf("%s",&emp.name);
 
-    printf("\nEnter ")
+    printf("\nEnter the salary: ");
+    scanf("%d",&emp.s1.sal);
+
+    printf("\nName: %s | Salary: %d \n\n",emp.name,emp.s1.sal);
+
 }
