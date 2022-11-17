@@ -9,7 +9,7 @@ void swap(int*, int*);
 void main()
 {
     int num1, num2;
-    int *p1, *p2;
+    //int *p1, *p2;
 
     printf("\nEnter num1 value: ");
     scanf("%d",&num1);
@@ -17,10 +17,10 @@ void main()
     printf("\nEnter num2 value: ");
     scanf("%d",&num2);
 
-    p1 = &num1;
-    p2 = &num2;
+    //p1 = &num1;
+    //p2 = &num2;
 
-    swap(p1,p2);
+    swap(&num1,&num2);
 }
 
 void swap(int *x,int *y){
@@ -34,13 +34,12 @@ void swap(int *x,int *y){
     printf("\n&z = %d | z = %d\n",&z,z);
     
     printf("\n&x = %d | x = %d\n",x,*x);
-    x = y;
+    *x = *y;
     printf("\n&y = %d | y = %d\n",y,*y);
 
     printf("\n&y = %d | y = %d\n",y,*y);
-    y = &z;
+    *y = z;
     printf("\n&z = %d | z = %d\n",&z,z);
-
 
     printf("\nElements after swapping: \n");
     printf("\nnum1 = %d | num2 = %d\n",*x,*y);
