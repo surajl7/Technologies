@@ -12,10 +12,9 @@
 # * * * * *
 
 num = int(input("Enter the limit: "))
-# i = 1
-# j = 1
 
-for (i = 1 in range (1, num)):
-    for (j = 1 in range (j, num)):
+for i in range(1, num + 1, 1):
+    for j in range(1, i + 1, 1):
         print("* ", end=' ')
+    # print(end='\n\\n')
     print(end='\n')
