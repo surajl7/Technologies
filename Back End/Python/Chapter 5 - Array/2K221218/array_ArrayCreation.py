@@ -13,20 +13,12 @@
 from numpy import *
 
 arr = array([1, 2, 3, 4])
-
-print("\narr.dtype: ",arr.dtype, end = '\n\n')
-
-print("type(<var>): ",type(arr), end = '\n\n')
-
-print("Array is: ", arr, end = '\n\n')
-
+print("\narr.dtype: ", arr.dtype, end='\n')
+print("type(<var>): ", type(arr), end='\n')
+print("Array is: ", arr, end='\n\n')
 
 # To convert data type:
-
-print("\nAfter change in datatype: ", end = '\n')
-
+print("\nAfter change in datatype: ", end='\n')
 arr = array([1, 2, 3.25, 4], float)
-
-print("\narr.dtype: ",arr.dtype, end = '\n\n')
-
-print("Array is: ",arr, end = '\n\n')
+print("arr.dtype: ", arr.dtype, end='\n')
+print("Array is: ", arr, end='\n')

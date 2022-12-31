@@ -23,6 +23,6 @@ import numpy
 
 from numpy import *
 
-arr = array([1,2,3,4,5])
+arr = array([1, 2, 3, 4, 5])
 
-print(arr, end = ' ')
+print(arr, end=' ')
