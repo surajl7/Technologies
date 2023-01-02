@@ -34,6 +34,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TrainingAndLearning\FullStack\Back End\Python\Chapter 5 - Array\2K230102" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="controlstatements_loops_armstrong_num" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
