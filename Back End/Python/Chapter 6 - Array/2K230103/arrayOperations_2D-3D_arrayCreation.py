@@ -48,15 +48,15 @@ from numpy import *
 
 # Method3 : ----------------->
 
+z = int(input("Enter num of pages in array: "))
 x = int(input("Enter num of rows in array: "))
 y = int(input("Enter num of columns in array: "))
-z = int(input("Enter num of pages in array: "))
 
 lis = []
 
-for i in range(0, x, 1):
-    for j in range(0, y, 1):
-        for k in range(0, z, 1):
+for i in range(0, z, 1):
+    for j in range(0, x, 1):
+        for k in range(0, y, 1):
             # print("arr1[{}][{}][{}]: ".format(i, j, k))
             lis.append(int(input("arr1[{}][{}][{}]: ".format(i, j, k))))
 
