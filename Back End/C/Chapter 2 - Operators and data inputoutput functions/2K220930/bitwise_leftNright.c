@@ -3,7 +3,8 @@
 // >> --> Right shift
 // &  --> And
 // |  --> Or
-// ^  --> Not
+// ^  --> XOR
+// !  --> Not
 
 #include<stdio.h>
 void main()
@@ -34,6 +35,7 @@ void main()
     int d = a | b;
     printf("\nOr operator [ %d | %d = %d ]",a,b,d);
 
+	//xor
     int e = a ^ b;
     printf("\nNot operator[ %d ^ %d = %d ]",a,b,e);
     printf("\n");
