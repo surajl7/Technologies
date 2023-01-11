@@ -38,7 +38,7 @@ class students      // declaring and defining class
             cout << "\nEnter roll num: ";
             cin >> roll_num;
             cout << "Enter name: ";
-            cin >> name;
+            cin >> name;            
         }
         void put()
         {
