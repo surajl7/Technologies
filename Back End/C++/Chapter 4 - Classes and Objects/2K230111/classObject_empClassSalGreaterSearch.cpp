@@ -1,7 +1,7 @@
 //Classes and Objects
 
 /*
-Ex. Finding Employee's having salaray greater then 10000;
+Ex. Displaying the list of Employee's having salaray greater then 10000;
 */
 
 #include<iostream>
@@ -36,7 +36,7 @@ void employee::put_info()
     cout << "\nEmployee number: " << empNum;
     cout << "\nEmployee name: " << empName;
     cout << "\nEmployee Salary: " << empSal;
-    cout << "\n-------------------------------\n"
+    cout << "\n-------------------------------\n";
 }
 
 int main()
@@ -46,14 +46,31 @@ int main()
     cout << "\nEnter Employee count: ";
     cin >> empCount;
 
-    employee e1;
-    employee e2;
+    employee empArr[empCount];
 
     for(int i = 0; i < empCount; i++){
-        e1.get_info();
+        empArr[i].get_info();
     }
 
-    for(int i = 0; )
+    // for(int i = 0; i < empCount; i++){
+    //     empArr[i].put_info();
+    // }
 
+    //Displaying info of employee having sal > 10000
+    // for(int i = 0; i < empCount; i++){
+    //     if (empArr[i].empSal > 10000){
+    //         empArr[i].put_info();
+    //     }
+    // }
+
+    cout << "\nDetails of employess having salary greater than 10000\n";
+    cout << "\nEmp. No. | Emp. Name | Emp. Sal.\n";
+    for (int i = 0; i< empCount; i++){
+        if (empArr[i].empSal > 10000){
+            cout << empArr[i].empNum << "\t|" << empArr[i].empName << "\t|" << empArr[i].empSal << "\n";
+        }
+    }
+
+    cout << "\n";
     return 0;
 }
