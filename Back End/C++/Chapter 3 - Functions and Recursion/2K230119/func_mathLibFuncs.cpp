@@ -1,5 +1,5 @@
 // Functions
-// 1 degree --> 0.0175 rad
+
 /*
 Commonly used math library functions
 
@@ -38,12 +38,16 @@ NOTE:
 
     To use the math library function, we must include the header file math.h in conventional
     C++ and cmath in ANSI C++.
+
+    // 1 degree --> 0.0175 rad
+
 */
 
 #include<iostream>
 #include<math.h>
 using namespace std;
 
+void dispOpt();
 void selectOpt(int, double, double);
 double roundUp(double);
 double roundDown(double);
@@ -56,93 +60,133 @@ double powerNum(double, double);
 double sine(double);
 double squareRoot(double);
 double tangent(double);
+void printlen(char, int);
+
+double const pi = 3.14159265359;
+double const degTradAngle = pi/180;
 
 int main()
 {
     int opt;
     double n1, n2;
 
-    // while(opt > 0 && opt <= 12)
-    // {
-        cout << "\nChoose between following options: \n";
-        cout << "\n1. Round up";
-        cout << "\n2. Round down";
-        cout << "\n3. Exponential of number";
-        cout << "\n4. Absolute value of number";
-        cout << "\n5. Natural logarithm of num";
-        cout << "\n6. Logarithm of num (log base 10)";
-        cout << "\n7. Square root of number";
-        cout << "\n8. Trigonometric sine";
-        cout << "\n9. Trigonometric cosine";
-        cout << "\n10. Trigonometric tangent";
-        cout << "\n11. num1 raised to power num2";
-        cout << "\n12. Exit\n\n";
-    // }
+    do
+    {
+        dispOpt();
 
-    cout << "Enter your option: ";
-    cin >> opt;
+        cout << "Enter your option: ";
+        cin >> opt;
 
-    if(opt == 12){
-        cout << "Thank you :)";
-    }
-    else if(opt != 11 and opt != 12){
-        cout << "Enter 1st number: ";
-        cin >> n1;
-    }
-    else{
-        cout << "Enter 1st number: ";
-        cin >> n1;
-        cout << "Enter 2nd  number: ";
-        cin >> n2;
-    }
+        // cout << typeid(opt).name();
 
-    selectOpt(opt, n1, n2=0);
+        if(opt > 0 && opt < 13){
+            if(opt == 12){
+                cout << "\nExiting...\n";
+                cout << "Thank you :)\n\n";
+            }
+            else if(opt == 8 || opt == 9 || opt == 10){
+                cout << "Enter the angle in degree format: ";
+                cin >> n1;
+            }
+            else if(opt != 11 and opt != 12){
+                cout << "Enter the number: ";
+                cin >> n1;
+            }
+            else{
+                cout << "Enter 1st number: ";
+                cin >> n1;
+                cout << "Enter 2nd  number: ";
+                cin >> n2;
+            }
+        }
+        else{
+            cout << "\nInvalid input :(\n\n";
+            printlen('*', 35);
+        }
+
+
+        selectOpt(opt, n1, n2);
+
+    }while(opt != 12);
 
     return 0;
+}
+
+void dispOpt()
+{
+    cout << "\nChoose between following options: \n";
+    cout << "\n1. Round up";
+    cout << "\n2. Round down";
+    cout << "\n3. Exponential of number";
+    cout << "\n4. Absolute value of number";
+    cout << "\n5. Natural logarithm of num";
+    cout << "\n6. Logarithm of num (log base 10)";
+    cout << "\n7. Square root of number";
+    cout << "\n8. Trigonometric sine";
+    cout << "\n9. Trigonometric cosine";
+    cout << "\n10. Trigonometric tangent";
+    cout << "\n11. num1 raised to power num2";
+    cout << "\n12. Exit\n\n";
 }
 
 
 void selectOpt(int opt, double num1, double num2)
 {
+    int count = 35;
+    char ch = '=';
+
     switch(opt)
     {
         case 1:
-            cout << roundUp(num1);
+            cout << "\nRound up value is: " << roundUp(num1) << "\n";
+            printlen(ch, count);
             break;
         case 2:
-            cout << roundDown(num1);
+            cout << "\nRound down value is: " << roundDown(num1) << "\n";
+            printlen(ch, count);
             break;
         case 3:
-            cout << exponential(num1);
+            cout << "\nExponential of " << num1 << " is: " << exponential(num1) << "\n";
+            printlen(ch, count);
             break;
         case 4:
-            cout << absolute(num1);
+            cout << "\nAbsolute value of " << num1 << " is: " << absolute(num1) << "\n";
+            printlen(ch, count);
             break;
         case 5:
-            cout << naturalLog(num1);
+            cout << "\nNatural Log of " << num1 << " is: " << naturalLog(num1) << "\n";
+            printlen(ch, count);
             break;
         case 6:
-            cout << logBaseT(num1);
+            cout << "\nLog base 10 of " << num1 << " is: " << logBaseT(num1) << "\n";
+            printlen(ch, count);
             break;
         case 7:
-            cout << squareRoot(num1);
+            cout << "\nSquare root of " << num1 << " is: " << squareRoot(num1) << "\n";
+            printlen(ch, count);
             break;
         case 8:
-            cout << sine(num1);
+            cout << "\nTrignometric sign of " << num1 << " is: " << sine(num1) << "\n";
+            printlen(ch, count);
             break;
         case 9:
-            cout << cos(num1);
+            cout << "\nTrignometric cosine of " << num1 << " is: " << cosine(num1) << "\n";
+            printlen(ch, count);
             break;
         case 10:
-            cout << tangent(num1);
+            cout << "\nTrignometric tangent of " << num1 << " is: " << tangent(num1) << "\n";
+            printlen(ch, count);
             break;
         case 11:
-            cout << powerNum(num1, num2);
+            cout << "\n" << num1 << " power " << num2 << " is: " << powerNum(num1, num2) << "\n";
+            printlen(ch, count);
             break;
         case 12:
             break;
-        default:
-            cout << "Invalid input :(";
+        // default:
+            // cout << "\nInvalid input :(\n";
+            // cout << "\nPlease choose the option from list.\n";
+
     }
 
 }
@@ -160,7 +204,7 @@ double roundDown(double num)
 
 double cosine(double angle)
 {
-    return (cos(angle));
+    return (cos(angle*degTradAngle));
 }
 
 double exponential(double num)
@@ -189,8 +233,8 @@ double powerNum(double num1, double num2)
 }
 
 double sine(double angle)
-{
-    return (sin(angle));
+{   
+    return (sin(angle*degTradAngle));
 }
 
 double squareRoot(double num)
@@ -200,5 +244,14 @@ double squareRoot(double num)
 
 double tangent(double angle)
 {
-    return (tan(angle));
+    return (tan(angle*degTradAngle));
+}
+
+void printlen(char ch, int count)
+{
+    for(int i = 0; i < count ; i++)
+    {
+        cout << ch;
+    }
+    cout << "\n";
 }
