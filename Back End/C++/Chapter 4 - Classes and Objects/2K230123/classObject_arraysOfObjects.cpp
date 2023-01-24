@@ -66,11 +66,20 @@ int main()
     int opt = 0;
     int mgr_count, foremans_count, workers_count;
 
+    cout << "\nWelcome :)\n";
+
+    cout << "\nEnter no of Managers count: ";
+    cin >> mgr_count;
     employee managers[mgr_count];
+
+    cout << "\nEnter no of foremans count: ";
+    cin >> foremans_count;
     employee foremans[foremans_count];
+
+    cout << "\nEnter no of workers count: ";
+    cin >> workers_count;
     employee workers[workers_count];
 
-    cout << "\nWelcome :)\n";
     do
     {   
         cout << "\nplease choose any option from below following: ";
@@ -89,32 +98,31 @@ int main()
         switch(opt)
         {
             case 1: 
-                cout << "\nEnter no of Managers count: ";
-                cin >> mgr_count;
                 data(mgr_count, managers);
                 break;
 
             case 2:
-                cout << "\nEnter no of foremans count: ";
-                cin >> foremans_count;
                 data(foremans_count, foremans);
+                break;
 
             case 3:
-                cout << "\nEnter no of workers count: ";
-                cin >> workers_count;
                 data(workers_count, workers);
-            
+                break;
+
             case 4:
                 cout << "Displaying Mangers details: ";
                 dispData(mgr_count, managers);
+                break;
 
             case 5:
                 cout << "Displaying foremans details: ";
-                dispData(mgr_count, foremans);
+                dispData(foremans_count, foremans);
+                break;
 
             case 6:
                 cout << "Displaying workers details: ";
-                dispData(mgr_count, workers);
+                dispData(workers_count, workers);
+                break;
 
             default:
                 cout << "\nThank you...\n";
