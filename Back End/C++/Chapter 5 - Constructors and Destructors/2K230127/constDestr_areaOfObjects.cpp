@@ -9,50 +9,89 @@ using namespace std;
 class area
 {
     private:
-        float side1, side2;
-        const float pi = 3.14;
+        float side;
     public:
-        area(float s) {pi, side1 = s;}                         // square         area = side*side
-        area(float s1, float s2) {side1 = s1; side2 = s2; pi;} // rectangle      area = legth*bredth
-     // area(float);                                       // circule        area = pi*r*r
-     // area(float, float);                                // triangle       area = 0.5*base*height
+
+        area(void) {};
+
+    // square         
+        // area = side*side
+        area(float s) 
+        {
+            side = s;
+        }     
+    // rectangle     
+        // area = legth*bredth                        
+        // area(float s1, float s2) 
+        // {
+        //     side1 = s1; 
+        //     side2 = s2; 
+        // } 
+    // circule       
+        // area = pi*r*r
+        // area(float);  
+    // triangle      
+        // area = 0.5*base*height                                         
+        // area(float, float);                                    
         
         friend area square(area);
-        friend area rectange(area, area);
+        friend area rectangle(area, area);
         friend area circule(area);
-        friend area triange(area, area);
+        friend area triangle(area, area);
 
+        friend area display(area);
 };
 
-area square(area obj, float pi)
+area square(area obj)
 {
-    cout << pi;
-    // return(pow(obj.side1, 2));
+    return(pow(obj.side, 2));
+}
+
+area rectangle(area obj1, area obj2)
+{
+    return(obj1.side*obj2.side);
+}
+
+area circule(area obj)
+{
+    const float pi = 3.14;
+    return(pi * pow(obj.side, 2));
+}
+
+area triangle(area obj1, area obj2)
+{
+    return(0.5*obj1.side*obj2.side);
+}
+
+area display(area obj)
+{
+    cout << obj.side;
     return 0;
 }
 
-area rectange(area obj1, area obj2)
-{
-    return(obj1.side1*obj2.side2);
-}
-
-area circule(float pi, area obj)
-{
-    // return(pi * pow(obj.side1, 2));
-    // return(pi*obj.side1);
-}
-
-area triange(area obj1, area obj2)
-{
-    return(0.5*obj1.side1*obj2.side2);
-}
-
-
 int main()
 {   
+    //Area of square:
     area A(10);
+    // area B;
 
-    area B = square(A);
+    // B = square(A);  display(B);
+    cout << "\nArea of square is "; display(square(A));
 
-    cout << A.pi;
+    // Area of rectangle
+    area l1(11), b1(22);
+
+    cout << "\nArea of rectangle is "; display(rectangle(l1, b1));
+
+    // Area of circule
+    area r1(20);
+
+    cout << "\nArea of circule is "; display(circule(r1));
+
+    // Area of triangle
+    area bs1(13), h1(98);
+
+    cout << "\nArea of triangle is "; display(triangle(bs1, h1));
+
+    cout << "\n\n";
 }
