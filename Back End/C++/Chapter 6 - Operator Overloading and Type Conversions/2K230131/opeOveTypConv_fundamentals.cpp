@@ -1,4 +1,4 @@
-// OPerator overloading and Type conversions
+// Operator overloading and Type conversions
 
 // Fundamentals
 
