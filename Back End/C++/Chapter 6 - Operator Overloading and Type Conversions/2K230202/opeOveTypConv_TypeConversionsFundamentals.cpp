@@ -80,3 +80,28 @@ Type Conversions:
     access functions in the source class to facilitated its data flow to the 
     destination class.
 */
+
+
+/*
+SUMMARY:
+    -   Operator overloading is one of the important features of C++ language.
+        It is called compile time polymorphism.
+    -   Using overloading features we can add two users defined data types such as 
+        objects, with the same synatx, just as basic types.
+    -   We can overload almost all the C++ operators except the following:
+        -   class member access operators(.,.*)
+        -   scope resolution operator(::)
+        -   size operator(sizeof)
+        -   conditional operator(?:)
+    -   Operator overloading is done with the help of a special function, called operator 
+        function, which describes the special task to an operator.
+    -   There are certain restrictions and limitations in overloading operators.
+        Operator function must either be member function (non-static) or frined function.
+        The overloading operator must have at least one operand that is of user-defined type.
+    -   The compiler does not support automatic type conversions for the users defined data
+        types. We can use casting operator functions to achive this.
+    -   The casting operator function should satisfy the following conditions:
+        -   It must be a class member.
+        -   It must not specify a return type.
+        -   It must not have any arguments.
+*/
