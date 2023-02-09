@@ -35,8 +35,9 @@ class accounts
 {
     protected:
         int account_num;
-        char *account_type;
+        char account_type[20];
         float balance;
+        float total_returns;
     public:
         void acc_number(int num)
         {
@@ -64,14 +65,13 @@ class accounts
 
         void display(void)
         {
-            std::cout << "\nAccount Number | Account Type | Account Balance \n"
-                      << account_num << "\t|\t" << account_type << "\t|\t" << balance << "\n";
+            std::cout << "\nAccount Number  | Account Type | Account Balance \n"
+                      << account_num << "\t\t| " << account_type << "\t|\t" << balance << "\n";
             std::cout << "------------------------------------------------------\n";
-
         }
 };
 
-//----------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
 
 class savings : public accounts
 {
@@ -79,17 +79,21 @@ class savings : public accounts
         float intrest_rate = 0.04;
         float total_returns;
     public:
-        void Returns(void)
+        int Returns()
         {
             total_returns = (intrest_rate * balance) + balance;
+            return total_returns;
         }
-        void display(void)
+
+        void display(savings obj)
         {
-            std::cout << "\nTotal returns: " << total_returns;
+            std::cout << "\nAccount Number  | Account Type | Account Balance | Total Returns\n"
+                      << account_num << "\t\t| " << account_type << "\t| " << balance << "\t\t| " << obj.total_returns << "\n";
+            std::cout << "-------------------------------------------------------------------------\n";
         }
 };
 
-//---------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 
 class current : public accounts
 {
@@ -101,9 +105,11 @@ class current : public accounts
         {
             total_returns = (intrest_rate * balance) + balance;
         }
-        void display(void)
+        void display(current obj)
         {
-            std::cout << "\nTotal returns: " << total_returns;
+            std::cout << "\nAccount Number  | Account Type | Account Balance | Total Returns\n"
+                      << account_num << "\t\t| " << account_type << "\t| " << balance << "\t\t| " << obj.total_returns << "\n";
+            std::cout << "-------------------------------------------------------------------------\n";
         }
 };
 
@@ -111,26 +117,22 @@ class current : public accounts
 
 class fixed_deposit : public accounts
 {
-    private:
-        char term;
+    protected:
+        char term[20];
     public:
         void term_type(char ch)
         {
-            term = ch;
-        }
-        void display(void)
-        {
-            if(term == 's' || term == 'S')
+            if(ch == 's' || ch == 'S')
             {
-                std::cout << "\nInvetment term: Short";
+                strcpy(term, "Short");
             }
-            else if(term == 'm' || term == 'M')
+            else if(ch == 'm' || ch == 'M')
             {
-                std::cout << "\nInvetment term: Medium";
+                strcpy(term, "Medium");
             }
             else
             {
-                std::cout << "\nInvetment term: Long";
+                strcpy(term, "Long");
             }
         }
 };
@@ -145,9 +147,11 @@ class Short : public fixed_deposit
         {
             total_returns = (intrest_rate * balance) + balance;
         }
-        void display(void)
+        void display(Short obj)
         {
-            std::cout << "\nTotal returns: " << total_returns;
+            std::cout << "\nAccount Number  | FD Invetment Term | Account Balance | Total Returns\n"
+                      << account_num << "\t\t| " << term << "\t| " << balance << "\t\t| " << obj.total_returns << "\n";
+            std::cout << "-------------------------------------------------------------------------\n";
         }
 };
 
@@ -161,9 +165,11 @@ class Medium : public fixed_deposit
         {
             total_returns = (intrest_rate * balance) + balance;
         }
-        void display(void)
+        void display(Medium obj)
         {
-            std::cout << "\nTotal returns: " << total_returns;
+            std::cout << "\nAccount Number  | FD Invetment Term | Account Balance | Total Returns\n"
+                      << account_num << "\t\t| " << term << "\t| " << balance << "\t\t| " << obj.total_returns << "\n";
+            std::cout << "-------------------------------------------------------------------------\n";
         }
 };
 
@@ -177,49 +183,66 @@ class Long : public fixed_deposit
         {
             total_returns = (intrest_rate * balance) + balance;
         }
-        void display(void)
+        void display(Long obj)
         {
-            std::cout << "\nTotal returns: " << total_returns;
+            std::cout << "\nAccount Number  | FD Invetment Term | Account Balance | Total Returns\n"
+                      << account_num << "\t\t| " << term << "\t| " << balance << "\t\t| " << obj.total_returns << "\n";
+            std::cout << "-------------------------------------------------------------------------\n";
         }
 };
 
 int main()
 {
-    savings sacc1;
-    current cacc1;
-    Short fsacc1;
-    Medium fmacc1;
-    Long flacc1;
+    // accounts sacc1;
 
+    savings sacc1;
+
+    std::cout << "SAVINGS account details: ";
     sacc1.acc_number(110101);
     sacc1.acc_type('s');
     sacc1.acc_balance(10000);
-    sacc1.Returns();
     sacc1.accounts::display();
+    sacc1.Returns();
+    sacc1.display(sacc1);
+
+    current cacc1;
+    cacc1.acc_number(234444);
+    cacc1.acc_type('c');
+    cacc1.acc_balance(10000);
+    cacc1.accounts::display();
+    cacc1.Returns();
+    cacc1.display(cacc1);
+
+    Short fsacc1;
+    fsacc1.acc_number(110101);
+    fsacc1.acc_type('s');
+    fsacc1.acc_balance(10000);
+    fsacc1.accounts::display();
+    fsacc1.Returns();
+    fsacc1.display(fsacc1);
+
+    Medium fmacc1;
+    fmacc1.acc_number(110101);
+    fmacc1.term_type('m');
+    fmacc1.acc_balance(10000);
+    fmacc1.accounts::display();
+    fmacc1.Returns();
+    fmacc1.display(fmacc1);
+
+    Long flacc1;
+    flacc1.acc_number(110101);
+    flacc1.acc_type('l');
+    flacc1.acc_balance(10000);
+    flacc1.accounts::display();
+    flacc1.Returns();
+    flacc1.display(flacc1);
+}
 
 
-//     cacc1.acc_number(234444);
-//     cacc1.acc_type('c');
-//     cacc1.acc_balance(10000);
-//     cacc1.Returns();
-//     cacc1.display();
-
-
-//     fsacc1.acc_number(110101);
-//     fsacc1.acc_type('s');
-//     fsacc1.acc_balance(10000);
-//     fsacc1.Returns();
-//     fsacc1.display();
-
-//     fmacc1.acc_number(110101);
-//     fmacc1.acc_type('m');
-//     fmacc1.acc_balance(10000);
-//     fmacc1.Returns();
-//     fmacc1.display();
-
-//     flacc1.acc_number(110101);
-//     flacc1.acc_type('l');
-//     flacc1.acc_balance(10000);
-//     flacc1.Returns();
-//     flacc1.display();
-// }
+/*
+NOTE:
+    In C++, such problems can be easily converted into class hierarchies, The base class
+    will include all the features that are common to the subclasses. A subclass can be
+    constructed by inheriting the properties of the base class A subclass can serve as
+    a base class for the lower level classes and so on.
+*/
