@@ -143,3 +143,29 @@ int main()
 
     return 0;
 }
+
+/*
+NOTE:
+    beta is initialized first, although it appears second in the derived constructor.
+    This is because it has been declared first in the derived class header line.
+    Also, note that alpha(a) and beta(b) are function calls. Therefor, the parameters
+    should not include types.
+
+    C++ supports another method of initializing the class object.
+    This method uses what is known as initializayion list in the constructor function.
+    This takes the following form:
+
+        constructor (arglist) : initialization-section
+        {
+            assignment-section
+        }
+
+    The assignment-section is nothing but body of the constructor function and is used
+    to assign initial value to its data memebers. The part immediately following 
+    the colon is known as initialization section.
+    We can use this section to provide initial value to the base constructors and also to
+    initialize its own class memebers. This means that we can use either of the sections
+    to initialize the data members of the constructors class. The initialization section
+    basically contains a list of initializations separated by commas. This list is known 
+    as initialization list.
+*/
