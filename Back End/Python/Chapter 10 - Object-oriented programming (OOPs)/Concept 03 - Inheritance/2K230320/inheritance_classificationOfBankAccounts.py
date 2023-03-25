@@ -50,11 +50,11 @@ class current(accounts):
 class fixed_deposit_fun(accounts):
     def __init__(self):
         self.account_type = "Fixed Deposit"
-        self.total_returns = None
+        self.total_returns = 0
 
     def fd_return_fun(self, interest_rate):
         self.interest_rate = interest_rate
-        self.total_returns = (self.interest_rate * self.total_returns) + self.balance
+        self.total_returns = (self.interest_rate * self.balance) + self.balance
         return self.total_returns
 
     def display_fd(self):
@@ -64,6 +64,7 @@ class fixed_deposit_fun(accounts):
 class fd_short_fun(fixed_deposit_fun):
     def __init__(self):
         self.term_type = "Short term Fixed Deposit"
+        # self.total_returns = 0
 
     def display_fd_s(self):
         fixed_deposit_fun.fd_return_fun(self, 0.06)
