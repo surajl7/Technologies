@@ -1,0 +1,3 @@
+Writing a line in demo.txt file
+Writing a second line in demo.txt file
+Python file Handling
