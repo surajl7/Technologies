@@ -11,7 +11,7 @@ mycursor = mydb.cursor()
 try:
     mycursor.execute("USE PYTHONTEST")
 
-    sql = "SELECT * FROM CUST2 WHERE name='lol'"
+    sql = "SELECT * FROM CUST3 WHERE name='lol'"
 
     mycursor.execute(sql)
 

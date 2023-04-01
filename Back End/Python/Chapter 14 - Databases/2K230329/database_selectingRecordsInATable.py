@@ -14,7 +14,7 @@ mycursor.execute("SHOW COLUMNS FROM CUST2")
 for x in mycursor:
     print(x)
 
-mycursor.execute("SELECT * FROM CUST2")
+mycursor.execute("SELECT * FROM CUST3")
 
 print("\nFetching only one record: ", end='\n')
 myresult = mycursor.fetchone()
