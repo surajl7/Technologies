@@ -59,6 +59,10 @@ print(math.pow(var2, 0.5))
 print("{:.2f}".format(math.pow(var2, 0.5)))
 
 
+# NOTE:
+# Standard Deviation is often represented by the symbol Sigma: σ
+# Variance is often represented by the symbol Sigma Square: σ^2
+
 
 
 
