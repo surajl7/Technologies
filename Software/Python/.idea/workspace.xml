@@ -30,7 +30,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/TrainingAndLearning/FullStack/Back End/Python&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/TrainingAndLearning/Technologies/Software/Python&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -41,7 +41,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="controlstatements_loops_armstrong_num" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -49,11 +49,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Chapter 4 - Control Statements/2K221224" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Chapter 4 - Control Statements/2K221224/controlstatements_loops_armstrong_num.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,9 +146,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Python" />
+      <item itemvalue="Python.controlstatements_loops_factorial_num" />
+      <item itemvalue="Python.controlstatements_loops_fibonacci_series" />
+      <item itemvalue="Python.controlstatements_loops_prime_num" />
+      <item itemvalue="Python.patteren_star_ascending" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.controlstatements_loops_armstrong_num" />
+        <item itemvalue="Python.Python" />
         <item itemvalue="Python.controlstatements_loops_fibonacci_series" />
         <item itemvalue="Python.patteren_star_ascending" />
         <item itemvalue="Python.controlstatements_loops_prime_num" />
