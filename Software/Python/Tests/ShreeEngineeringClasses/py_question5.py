@@ -2,6 +2,8 @@
 #
 # Design a python program which will throw an exception if the value entered by the user is less than zero
 
+# -----------------------------------------------------------------------------------------
+
 # try:
 #     value = int(input("Enter your value: "))
 #     if value < 0:

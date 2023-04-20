@@ -2,6 +2,7 @@
 #
 # Write a Python Program to calculate factorial of a given number using a function
 
+# -----------------------------------------------------------------------------------------
 
 num = int(input("Enter your number: "))
 

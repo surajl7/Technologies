@@ -2,6 +2,7 @@
 #
 # Write a python program to concatenate two strings
 
+# -----------------------------------------------------------------------------------------
 
 str1 = str(input("Enter 1st string: "))
 str2 = str(input("Enter 2nd string: "))

@@ -2,6 +2,8 @@
 #
 # Write a python program to print fibonacci series up to n terms
 
+# -----------------------------------------------------------------------------------------
+
 n = int(input("Enter number of terms: "))
 
 
